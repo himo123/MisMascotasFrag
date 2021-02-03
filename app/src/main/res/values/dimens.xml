@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--CÓDIGO GENERADO POR HECTOR IVAN MORALES OVANDO-->
+
 <resources>
     <dimen name="actionBarElevation">4dp</dimen>
     <dimen name="appNameTextSize">18sp</dimen>

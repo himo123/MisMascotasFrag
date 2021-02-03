@@ -14,6 +14,8 @@ import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
+    //CÓDIGO GENERADO POR HECTOR IVAN MORALES OVANDO
+
     ArrayList<Mascota> mascotas = new ArrayList<>();
     private RecyclerView rvMascotas;
     private Mascota Mascota;

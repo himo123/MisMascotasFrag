@@ -1,6 +1,9 @@
 package com.himo.mismascotas;
 
 public class Mascota implements Comparable {
+
+    //CÓDIGO GENERADO POR HECTOR IVAN MORALES OVANDO
+
     private String nombre;
     //private String tipo; //perro, gato, loro
     private String raza;

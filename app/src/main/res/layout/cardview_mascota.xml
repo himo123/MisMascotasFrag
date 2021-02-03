@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--CÓDIGO GENERADO POR HECTOR IVAN MORALES OVANDO-->
+
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cvMascotas"

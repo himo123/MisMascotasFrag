@@ -16,6 +16,8 @@ import java.util.Collections;
 
 public class MascotasFavoritas extends AppCompatActivity {
 
+    //CÓDIGO GENERADO POR HECTOR IVAN MORALES OVANDO
+
     ArrayList<Mascota> mascotasFavoritas, borrarMascotas;
     private RecyclerView rvMascotasFavoritas;
 
