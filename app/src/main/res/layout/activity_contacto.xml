@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--CÓDIGO GENERADO POR HECTOR IVAN MORALES OVANDO-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactoActivity">
+
+    <include
+        android:id="@+id/miToolBar"
+        layout="@layout/tool_bar"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/areaEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/areaSubject"
+        app:layout_constraintTop_toBottomOf="@+id/miToolBar">
+
+        <EditText
+            android:id="@+id/edtDestinatario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/hint_EmailDestinatario"
+            android:hint="@string/hint_EmailDestinatario"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/areaSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/areaEmail"
+        app:layout_constraintBottom_toTopOf="@+id/areaMessage">
+
+        <EditText
+            android:id="@+id/edtAsunto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_Asunto"
+            android:autofillHints="@string/hint_Asunto"
+            android:inputType="textEmailSubject"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/areaMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/areaSubject"
+        app:layout_constraintBottom_toTopOf="@+id/btnSiguiente">
+
+        <EditText
+            android:id="@+id/edtMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_Mensaje"
+            android:autofillHints="@string/hint_Mensaje"
+            android:inputType="textMultiLine"
+            android:singleLine="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/btn_siguiente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/areaMessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

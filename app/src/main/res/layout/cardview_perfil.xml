@@ -4,13 +4,13 @@
 
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/cvMascotas"
+    android:id="@+id/cvPerfil"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="@dimen/actionBarElevation"
     android:layout_marginTop="@dimen/rvMascotasPadding"
-    android:layout_marginLeft="40dp"
-    android:layout_marginRight="40dp">
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,59 +19,40 @@
         android:padding="@dimen/rvMascotasPadding">
 
         <ImageView
-            android:id="@+id/imgFoto"
-            android:layout_width="260dp"
-            android:layout_height="260dp"
+            android:id="@+id/imgFotoPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:scaleType="fitCenter"
             android:contentDescription="@string/pfoto"
             android:src="@drawable/dibujo_perro"/>
 
         <GridLayout
-            android:layout_width="260dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/actionBarElevation">
 
-            <ImageButton
-                android:id="@+id/btnLike"
-                android:layout_width="@dimen/huesosTamaño"
-                android:layout_height="@dimen/huesosTamaño"
-                android:layout_columnWeight="0.1"
-                android:layout_gravity="start"
-                android:contentDescription="@string/prating"
-                android:background="@drawable/icons8_hueso_blanco"/>
-
             <TextView
-                android:id="@+id/tvNombreCV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pnombre"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_gravity="start"
-                android:layout_columnWeight="0.5"/>
-
-            <TextView
-                android:id="@+id/tvRatingCV"
+                android:id="@+id/tvRatingCVPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/prating"
                 android:textSize="20sp"
-                android:layout_gravity="end"
-                android:layout_columnWeight="0.1"/>
+                android:layout_gravity="center"
+                android:layout_columnWeight="1"/>
 
             <ImageButton
-                android:id="@+id/btnDorado"
+                android:id="@+id/btnDoradoPerfil"
                 android:layout_width="@dimen/huesosTamaño"
                 android:layout_height="@dimen/huesosTamaño"
                 android:background="@drawable/icons8_hueso_dorado"
-                android:layout_gravity="start"
+                android:layout_gravity="center"
                 android:contentDescription="@string/prating"
-                android:layout_columnWeight="0"/>
+                android:layout_columnWeight="1"/>
 
-         </GridLayout>
+        </GridLayout>
 
     </LinearLayout>
 

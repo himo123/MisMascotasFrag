@@ -6,17 +6,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/miToolBar"
-        layout="@layout/tool_bar"/>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/miAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMascotas"
+        <include
+            android:id="@+id/miToolBar"
+            layout="@layout/tool_bar"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/miTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/miToolBar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/miViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/miToolBar"/>
+        android:layout_below="@id/miAppBarLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 </RelativeLayout>
 

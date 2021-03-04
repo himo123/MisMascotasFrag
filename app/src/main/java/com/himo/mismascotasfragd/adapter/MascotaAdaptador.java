@@ -1,4 +1,4 @@
-package com.himo.mismascotas;
+package com.himo.mismascotasfragd.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,10 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.himo.mismascotasfragd.pojo.Mascota;
+import com.himo.mismascotasfragd.R;
 
 import java.util.ArrayList;
 
@@ -21,23 +23,23 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     ArrayList<Mascota> mascotas;
     Activity contexto;
 
-    public MascotaAdaptador(ArrayList<Mascota> mascotas, Activity contexto){
+    public MascotaAdaptador(ArrayList<Mascota> mascotas, Activity contexto) {
         this.mascotas = mascotas;
         this.contexto = contexto;
     }
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder {
-        private ImageView imgFoto;
-        private ImageButton btnLike;
-        private TextView tvNombreCV;
-        private TextView tvRatingCV;
+        private final ImageView imgFoto;
+        private final ImageButton btnLike;
+        private final TextView tvNombreCV;
+        private final TextView tvRatingCV;
 
         public MascotaViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgFoto       = (ImageView) itemView.findViewById(R.id.imgFoto);
-            btnLike       = (ImageButton) itemView.findViewById(R.id.btnLike);
-            tvNombreCV    = (TextView) itemView.findViewById(R.id.tvNombreCV);
-            tvRatingCV    = (TextView) itemView.findViewById(R.id.tvRatingCV);
+            imgFoto = itemView.findViewById(R.id.imgFoto);
+            btnLike = itemView.findViewById(R.id.btnLike);
+            tvNombreCV = itemView.findViewById(R.id.tvNombreCV);
+            tvRatingCV = itemView.findViewById(R.id.tvRatingCV);
         }
     }
 
@@ -55,26 +57,23 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         holder.tvNombreCV.setText(mascota.getNombre());
         holder.tvRatingCV.setText(String.valueOf(mascota.getRating()));
 
-//        Mostrar la información de una mascota
+//        //Mostrar la información de una mascota
 //        holder.imgFoto.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                Toast.makeText(contexto, "Mascota: " + mascota.getNombre(), Toast.LENGTH_SHORT).show();
-//                Intent intento = new Intent(activity, DetalleContacto.class);
-//                intento.putExtra(activity.getResources().getString(R.string.pnombre), contacto.getNombre());
-//                intento.putExtra(activity.getResources().getString(R.string.ptelefono), contacto.getTelefono());
-//                intento.putExtra(activity.getResources().getString(R.string.pemail), contacto.getEmail());
-//                activity.startActivity(intento);
+//                Intent intento = new Intent(v.getContext(), PerfilFragment.class);
+//                intento.putExtra(v.getContext().getResources().getString(R.string.pnombre), contacto.getNombre());
+//                intento.putExtra(v.getContext().getResources().getString(R.string.ptelefono), contacto.getTelefono());
+//                intento.putExtra(v.getContext().getResources().getString(R.string.pemail), contacto.getEmail());
+//                v.getContext().startActivity(intento);
 //            }
 //        });
 
-        holder.btnLike.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (holder.btnLike.getVisibility() == View.VISIBLE) {
-                    mascota.setRating(mascota.getRating() + 1);
-                    holder.tvRatingCV.setText(String.valueOf(mascota.getRating()));
-                }
+        holder.btnLike.setOnClickListener(v -> {
+            if (holder.btnLike.getVisibility() == View.VISIBLE) {
+                mascota.setRating(mascota.getRating() + 1);
+                holder.tvRatingCV.setText(String.valueOf(mascota.getRating()));
             }
         });
     }

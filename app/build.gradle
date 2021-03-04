@@ -7,13 +7,17 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.himo.mismascotas"
+        applicationId "com.himo.mismascotasfrag"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        packagingOptions {
+            pickFirst 'META-INF/LICENSE.txt' // picks the JavaMail license file
+        }
     }
 
     buildTypes {
@@ -36,4 +40,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.sun.mail:android-mail:1.6.2'
+    implementation 'com.sun.mail:android-activation:1.6.2'
 }
