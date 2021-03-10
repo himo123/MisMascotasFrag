@@ -20,15 +20,15 @@
 
         <ImageView
             android:id="@+id/imgFoto"
-            android:layout_width="260dp"
-            android:layout_height="260dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_gravity="center"
             android:scaleType="fitCenter"
             android:contentDescription="@string/pfoto"
             android:src="@drawable/dibujo_perro"/>
 
         <GridLayout
-            android:layout_width="260dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal"

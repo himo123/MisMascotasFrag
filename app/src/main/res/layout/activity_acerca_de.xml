@@ -11,16 +11,155 @@
 
     <include
         android:id="@+id/miToolBar"
-        layout="@layout/tool_bar"/>
+        layout="@layout/tool_bar" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/miToolBar"
+        app:layout_constraintBottom_toTopOf="@id/tvYoSoy">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/civFotoPerfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/marcianito"
+            app:civ_border="true"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="4dp"
+            app:civ_shadow="false"
+            app:civ_shadow_color="@color/textColorPrimary"
+            app:civ_shadow_radius="6dp" />
+
+    </FrameLayout>
 
     <TextView
-        android:id="@+id/tvAcercaDe"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvYoSoy"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/miToolBar"
-        android:text="@string/menu_AcercaDe"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/miToolBar" />
+        android:paddingTop="@dimen/rvMascotasPadding"
+        android:text="@string/yoSoy"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout"
+        app:layout_constraintBottom_toTopOf="@id/tvMiNombre" />
+
+    <TextView
+        android:id="@+id/tvMiNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/rvMascotasPadding"
+        android:text="@string/minombre"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvYoSoy"
+        app:layout_constraintBottom_toTopOf="@id/tvEstudios" />
+
+    <TextView
+        android:id="@+id/tvEstudios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/rvMascotasPadding"
+        android:text="@string/misestudios"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvMiNombre"
+        app:layout_constraintBottom_toTopOf="@id/tvMiCarrera" />
+
+    <TextView
+        android:id="@+id/tvMiCarrera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/rvMascotasPadding"
+        android:text="@string/micarrera"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvEstudios"
+        app:layout_constraintBottom_toTopOf="@id/tvPasion" />
+
+    <TextView
+        android:id="@+id/tvPasion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/rvMascotasPadding"
+        android:text="@string/curso"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvMiCarrera"
+        app:layout_constraintBottom_toTopOf="@id/tvCoursera" />
+
+    <TextView
+        android:id="@+id/tvCoursera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/rvMascotasPadding"
+        android:text="@string/coursera"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvPasion"
+        app:layout_constraintBottom_toTopOf="@id/tvGustar" />
+
+    <TextView
+        android:id="@+id/tvGustar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/rvMascotasPadding"
+        android:text="@string/gustar"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvCoursera"
+        app:layout_constraintBottom_toTopOf="@id/tvFecha" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/rvMascotasPadding"
+        android:text="@string/fecha"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvGustar"
+        app:layout_constraintBottom_toTopOf="@id/tvPublicacion" />
+
+    <TextView
+        android:id="@+id/tvPublicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/rvMascotasPadding"
+        android:text="@string/fechapublicacion"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvFecha"
+        app:layout_constraintBottom_toTopOf="@id/tvCorreo" />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/rvMascotasPadding"
+        android:text="@string/micorreoes"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvPublicacion"
+        app:layout_constraintBottom_toTopOf="@id/tvMiCorreo" />
+
+    <TextView
+        android:id="@+id/tvMiCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/rvMascotasPadding"
+        android:text="@string/micorreo"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvCorreo"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,4 +19,17 @@
     <string name="hint_Asunto">Asunto</string>
     <string name="hint_Mensaje">Mensaje</string>
     <string name="btn_siguiente">E N V I A R</string>
+
+    <!--Activity Acerca de-->
+    <string name="yoSoy">¡¡¡Hola!!! Yo soy</string>
+    <string name="minombre">Hector Ivan Morales Ovando</string>
+    <string name="misestudios">Hace algunos años estudié</string>
+    <string name="micarrera">Ing. en Sistemas Computacionales</string>
+    <string name="micorreoes">Mi correo es:</string>
+    <string name="micorreo">himo123@hotmail.com</string>
+    <string name="fecha">Fecha de publicación:</string>
+    <string name="fechapublicacion">Marzo 2021</string>
+    <string name="curso">Ahora estoy aprendiendo programación con Android, solo por gusto en la plataforma Coursera:</string>
+    <string name="coursera">Desarrollo de Aplicaciones con Android</string>
+    <string name="gustar">Espero que te agrede mi app</string>
 </resources>

@@ -7,4 +7,5 @@ Para la tarea de la semana 4 de Coursera partiendo del proyecto anterior de Mis 
 ***IMPORTANTE***
 Para probar el envío de correo electrónico debes seguir estos pasos de configuración previa:
 
-Acceso de apps menos seguras
+Cómo permitir que apps menos seguras accedan a tu cuenta:
+https://support.google.com/accounts/answer/6010255?hl=es-419

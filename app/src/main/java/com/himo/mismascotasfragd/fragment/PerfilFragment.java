@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import com.himo.mismascotasfragd.adapter.MascotaAdaptador;
 import com.himo.mismascotasfragd.adapter.PerfilAdaptador;
 import com.himo.mismascotasfragd.pojo.Mascota;
 import com.himo.mismascotasfragd.pojo.MisMascotas;
+import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,6 +31,8 @@ public class PerfilFragment extends Fragment {
 
     ArrayList<Mascota> unaMascota = new ArrayList<>();
     private RecyclerView rvPerfilMascota;
+    private CircularImageView civFotoPerfil;
+    private TextView tvNombrePerfil;
 
     @Nullable
     @Override
@@ -39,12 +43,14 @@ public class PerfilFragment extends Fragment {
         GridLayoutManager glm = new GridLayoutManager(getActivity(), 3);
         rvPerfilMascota.setLayoutManager(glm);
 
-//        inicializarListaMascotas();
-//        inicializarAdaptador();
+        civFotoPerfil = v.findViewById(R.id.civFotoPerfil);
+        tvNombrePerfil = v.findViewById(R.id.tvNombrePerfil);
 
         return v;
     }
 
+    //inicializo la lista y el adaptador en este método para que cada vez que
+    //se abra el fragment, muestre una mascota diferente a la anterior
     @Override
     public void onResume() {
         super.onResume();
@@ -55,7 +61,8 @@ public class PerfilFragment extends Fragment {
     public void inicializarListaMascotas() {
         MisMascotas Mm = new MisMascotas();
         unaMascota = Mm.soloUnaMascota(100);
-
+        civFotoPerfil.setImageResource(unaMascota.get(0).getFoto());
+        tvNombrePerfil.setText(String.valueOf(unaMascota.get(0).getNombre()));
         Collections.sort(unaMascota);
     }
 
