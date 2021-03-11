@@ -8,8 +8,8 @@ Para la tarea de la semana 4 de Coursera partiendo del proyecto anterior de Mis 
 Para probar el envío de correo electrónico debes seguir estos pasos de configuración previa: 
 1. En el proyecto, abre la clase de java llamada email que se encuentra en la carpeta email. 
 2. Escribe tu correo y contraseña de tu cuenta de GMAIL para realizar la prueba de la app. (OJO: forzosamente debe ser GMAIL). 
-3. Antes de ejecutar el código, vale la pena que visites el siguiente link (pantalla 07) para activar la opción "Permitir que apps menos seguras accedan a tu cuenta": https://support.google.com/accounts/answer/6010255?hl=es-419
-4. Cuando actives la opción mencionada, te llegará un correo electrónico automático por parte de Google informándote de la acción que acabas de realizar (pantalla 08). 
+3. Antes de ejecutar el código, vale la pena que visites el siguiente link ([pantalla 07](https://github.com/himo123/MisMascotasFrag/blob/master/07%20link%20apps%20menos%20seguras.jpg)) para activar la opción "Permitir que apps menos seguras accedan a tu cuenta": https://support.google.com/accounts/answer/6010255?hl=es-419
+4. Cuando actives la opción mencionada, te llegará un correo electrónico automático por parte de Google informándote de la acción que acabas de realizar ([pantalla 08](https://github.com/himo123/MisMascotasFrag/blob/master/08%20acceso%20de%20apps%20menos%20seguras.jpg)). 
 5. Una vez que termines de probar mi código/app, te recomiendo que desactives la función anterior. 
 
 
