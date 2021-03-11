@@ -6,7 +6,7 @@ public class Config {
     //Usuario y contraseña del correo que envía (remitente)
     //Las configuraciones del servidor están direccionadas a Gmail, por lo tanto, el correo de salida debe ser ...@gmail.com
 
-    public static final String EMAIL ="himo123@gmail.com";  //forzosamente debe ser gmail
-    public static final String PASSWORD ="Esfu3rz0";
+    public static final String EMAIL ="tucorreo@gmail.com";  //forzosamente debe ser gmail
+    public static final String PASSWORD ="TuContras3ña";
 
 }

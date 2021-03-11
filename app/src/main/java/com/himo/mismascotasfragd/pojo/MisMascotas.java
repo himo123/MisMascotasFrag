@@ -1,7 +1,6 @@
 package com.himo.mismascotasfragd.pojo;
 
 import com.himo.mismascotasfragd.R;
-import java.util.Random;
 import java.util.ArrayList;
 
 public class MisMascotas {

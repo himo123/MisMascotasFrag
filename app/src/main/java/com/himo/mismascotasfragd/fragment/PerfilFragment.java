@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +13,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.himo.mismascotasfragd.R;
-import com.himo.mismascotasfragd.adapter.MascotaAdaptador;
 import com.himo.mismascotasfragd.adapter.PerfilAdaptador;
 import com.himo.mismascotasfragd.pojo.Mascota;
 import com.himo.mismascotasfragd.pojo.MisMascotas;
@@ -22,8 +20,6 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
-import static android.widget.Toast.LENGTH_SHORT;
 
 public class PerfilFragment extends Fragment {
 

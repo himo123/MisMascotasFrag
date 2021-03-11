@@ -23,11 +23,10 @@ import javax.mail.internet.MimeMessage;
     public class SendMail extends AsyncTask<Void,Void,Void> {
 
         private Context contexto;
-        private Session sesion;
 
-        private String destinatario;
-        private String asunto;
-        private String mensaje;
+        private final String destinatario;
+        private final String asunto;
+        private final String mensaje;
 
         //Ventana para mostrar el avance mientras se envía el mensaje
         private ProgressDialog ventanaDeProgreso;
@@ -69,7 +68,8 @@ import javax.mail.internet.MimeMessage;
             propiedades.put("mail.smtp.port", "465");
 
             //Creando una nueva sesión
-            sesion = Session.getDefaultInstance(propiedades,
+            //Authenticating the password
+            Session sesion = Session.getDefaultInstance(propiedades,
                     new javax.mail.Authenticator() {
                         //Authenticating the password
                         protected PasswordAuthentication getPasswordAuthentication() {
